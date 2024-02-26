@@ -553,17 +553,35 @@ address {
   flex-basis: calc((100% - 3 * var(--gap-regular)) / 4);
 }
 
+/* -------CONTACTS WRAP  */
+
+.contacts-wrap {
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-color: #191c26;
+
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px) 100%;
+}
+
+.contacts-wrap > .container {
+  display: flex;
+}
+
 /* ----------------------------booking */
 
 .booking {
   padding-top: 130px;
   padding-bottom: 174px;
 
-  background-color: #191c26;
+  flex-basis: calc(50% + 15px);
 }
 
 .booking-title {
-  text-align: center;
+  /* text-align: center; */
   color: var(--first-title-color);
 }
 
@@ -572,13 +590,9 @@ address {
 .contacts {
   padding-top: 130px;
   padding-bottom: 111px;
+  padding-left: 105px;
 
-  background-color: #191c26;
-  background-image: linear-gradient(rgba(25, 28, 38, 0.7), rgba(25, 28, 38, 0.7)),
-    url(../images/contacts-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  flex-basis: calc(50% - 15px);
 }
 
 .contacts-title {
@@ -615,6 +629,24 @@ address {
   color: var(--primary-text-color);
 }
 
+.address-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.address-icon {
+  fill: red;
+}
+
+/* .address-link:first-child {
+  align-items: flex-start;
+} */
+
+.address-icon {
+  fill: currentColor;
+}
+
 .contacts-upper-text {
   margin-bottom: 20px;
 
@@ -630,6 +662,12 @@ address {
   background-color: var(--secondary-bgc);
 }
 
+.footer > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-text {
   font-weight: 600;
   font-size: 11px;
@@ -637,8 +675,19 @@ address {
   color: var(--primary-text-color);
 }
 
-/* .footer-list {
-} */
+.footer-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
-/* .footer-item {
-} */
+.footer-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+
+  background-color: var(--second-title-color);
+}
+
+.footer-item {
+}
