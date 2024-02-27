@@ -8,6 +8,7 @@
   --secondary-bgc: #f7f7f7;
   --gap-regular: 30px;
   --bg-linear-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
+  --cubic: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 body {
@@ -103,6 +104,13 @@ address {
   background-color: transparent;
 
   cursor: pointer;
+
+  transition: background-color 250ms var(--cubic);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-color);
 }
 
 .visually-hidden {
@@ -121,15 +129,16 @@ address {
 /* ----------------------------Header */
 
 .header {
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-
-  background-color: gray;
 }
 
 .header > .container {
   display: flex;
   align-items: center;
+  padding-right: 32px;
 }
 
 .header-navigation {
@@ -157,10 +166,14 @@ address {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--interact-color);
+
+  transition: color 250ms var(--cubic);
 }
 
 .navigation-link:hover,
-.navigation-link:focus {
+.navigation-link:focus,
+.header-tel:hover,
+.header-tel:focus {
   color: var(--accent-color);
 }
 
@@ -183,8 +196,29 @@ address {
   display: flex;
 }
 
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+
+  background-color: var(--second-title-color);
 }
 
 .hero-item {
@@ -196,6 +230,8 @@ address {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--second-title-color);
+
+  transition: color 250ms var(--cubic);
 }
 
 .hero-link:hover,
@@ -285,6 +321,13 @@ address {
 
 .about-button {
   color: var(--second-title-color);
+
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
+}
+
+.about-button:hover,
+.about-button:focus {
+  color: var(--secondary-bgc);
 }
 
 /* -------------------------servisec */
@@ -522,11 +565,14 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: fill 250ms var(--cubic), transform 250ms var(--cubic);
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus {
   fill: var(--accent-color);
+  transform: scale(1.4);
 }
 
 /* ---------------------------portfolio */
@@ -602,6 +648,7 @@ address {
 }
 
 .address {
+  max-width: 270px;
   margin-bottom: 70px;
 }
 
@@ -633,6 +680,13 @@ address {
   display: flex;
   align-items: center;
   gap: 16px;
+
+  transition: transform 250ms var(--cubic);
+}
+
+.address-link:hover,
+.address-link:focus {
+  transform: scale(1.1);
 }
 
 .address-icon {
@@ -643,8 +697,9 @@ address {
   align-items: flex-start;
 } */
 
-.address-icon {
-  fill: currentColor;
+.address-icon.own {
+  position: relative;
+  top: -12px;
 }
 
 .contacts-upper-text {
