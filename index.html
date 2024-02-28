@@ -12,6 +12,11 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
       integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
       crossorigin="anonymous"
@@ -68,7 +73,7 @@
           <!-- HERO -->
           <div class="hero-wrap">
             <p class="hero-upper-text upper-text">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title title">BarberShop</h1>
+            <h1 class="hero-title title animate__animated animate__bounce">BarberShop</h1>
             <p class="hero-down-text down-text">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
@@ -90,7 +95,7 @@
 
           <div class="about-wrap">
             <p class="about-upper-text upper-text">About</p>
-            <h2 class="about-title title">Best Barbershop in your city</h2>
+            <h2 class="about-title title" data-aos="fade-left">Best Barbershop in your city</h2>
             <p class="about-down-text down-text">
               If you want to add more confidence to your image, you should definitely visit us.
             </p>
@@ -110,7 +115,7 @@
       <section class="services" id="services">
         <div class="container">
           <p class="services-upper-text upper-text">Spend your time with the best masters</p>
-          <h2 class="services-title title">Services and prices</h2>
+          <h2 class="services-title title" data-aos="fade-right">Services and prices</h2>
 
           <div class="services-wrap">
             <ul class="services-list">
@@ -179,7 +184,7 @@
 
           <div class="benefits-wrap">
             <p class="benefits-upper-text upper-text">Old traditional school</p>
-            <h2 class="benefits-title title">¿Why people come to us?</h2>
+            <h2 class="benefits-title title" data-aos="fade-left">¿Why people come to us?</h2>
             <p class="benefits-down-text down-text">
               Only good things are said about us. But it's better to see and feel 1 time than read
               10 times.
@@ -192,7 +197,7 @@
       <section class="team" id="barbers">
         <div class="container">
           <p class="team-upper-text upper-text">For true enjoyers of the atmosphere</p>
-          <h2 class="team-title title">Our barbers</h2>
+          <h2 class="team-title title" data-aos="fade-right">Our barbers</h2>
           <ul class="team-list">
             <li class="team-item">
               <img src="./images/img-barb-1.jpg" alt="haircut" width="370" height="346" />
@@ -309,7 +314,14 @@
           <h2 class="visually-hidden">portfilio of haircut</h2>
           <p class="portfilio-text upper-text">In Latin, "barba" means "beard"</p>
           <ul class="portfilio-list">
-            <li class="portfilio-item">
+            <li
+              class="portfilio-item"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              data-aos-delay="150"
+            >
+              >
               <img
                 src="./images/img-portfolio-1.jpg"
                 alt="barbers haircut"
@@ -317,7 +329,14 @@
                 height="360"
               />
             </li>
-            <li class="portfilio-item">
+            <li
+              class="portfilio-item"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              data-aos-delay="150"
+            >
+              >
               <img
                 src="./images/img-portfolio-2.jpg"
                 alt="barbers haircut"
@@ -325,7 +344,14 @@
                 height="360"
               />
             </li>
-            <li class="portfilio-item">
+            <li
+              class="portfilio-item"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              data-aos-delay="150"
+            >
+              >
               <img
                 src="./images/img-portfolio-3.jpg"
                 alt="barbers haircut"
@@ -333,7 +359,14 @@
                 height="360"
               />
             </li>
-            <li class="portfilio-item">
+            <li
+              class="portfilio-item"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              data-aos-delay="150"
+            >
+              >
               <img
                 src="./images/img-portfolio-4.jpg"
                 alt="barbers haircut"
@@ -349,12 +382,12 @@
         <div class="container">
           <!-- SECTION 7 online booking -->
           <section class="booking">
-            <h2 class="booking-title title">Online-booking</h2>
+            <h2 class="booking-title title" data-aos="zoom-out">Online-booking</h2>
           </section>
 
           <!-- SECTION 8 Contacts -->
           <section class="contacts">
-            <h2 class="contacts-title title">Contacts</h2>
+            <h2 class="contacts-title title" data-aos="zoom-out">Contacts</h2>
             <address class="address">
               <ul class="address-list">
                 <li class="address-item">
@@ -423,5 +456,9 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
