@@ -454,6 +454,7 @@ address {
 }
 
 .benefits-item > .count {
+  position: relative;
   display: block;
   margin-bottom: 8px;
 
@@ -463,6 +464,19 @@ address {
   letter-spacing: 0.05em;
   text-align: center;
   color: var(--second-title-color);
+}
+
+.benefits-item > .count::after {
+  content: '+';
+  position: absolute;
+  top: 7px;
+  margin-left: 1px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  color: #ff6c00;
 }
 
 .benefits-item-text {
@@ -745,4 +759,58 @@ address {
 }
 
 .footer-item {
+}
+
+/* ----------------backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(136, 211, 211, 0.504);
+
+  transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  width: 500px;
+  min-height: 400px;
+
+  transition: transform 250ms var(--cubic);
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  background-color: #d1dfd7;
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+}
+
+.wrp {
+  margin-left: auto;
+}
+
+.modal-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  cursor: pointer;
 }

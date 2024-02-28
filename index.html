@@ -42,7 +42,7 @@
         <a class="header-tel link" href="tel:+380441111111">+38 044 111 11 11</a>
 
         <!-- ONLINE BOOKING -->
-        <button class="header-button btn" type="button">Online-booking</button>
+        <button data-modal-open class="header-button btn" type="button">Online-booking</button>
       </div>
     </header>
 
@@ -413,5 +413,15 @@
         </ul>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <div class="wrp">
+          <button class="modal-btn" type="button" data-modal-close>X</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
