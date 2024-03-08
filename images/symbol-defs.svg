@@ -24,5 +24,8 @@
       <path fill="none" stroke="#9da4bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M6.4 6.667h19.2c1.32 0 2.4 1.05 2.4 2.333v14c0 1.283-1.08 2.333-2.4 2.333H6.4C5.08 25.333 4 24.283 4 23V9c0-1.283 1.08-2.333 2.4-2.333z" style="stroke:var(--color1, #9da4bd)"/>
       <path fill="none" stroke="#9da4bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="m26.667 9.333-10.667 8-10.667-8" style="stroke:var(--color1, #9da4bd)"/>
     </symbol>
+    <symbol id="icon-close-modal" viewBox="0 0 32 32">
+      <path d="M32 3.223 28.777 0 16 12.777 3.223 0 0 3.223 12.777 16 0 28.777 3.223 32 16 19.223 28.777 32 32 28.777 19.223 16 32 3.223z"/>
+    </symbol>
   </defs>
 </svg>
